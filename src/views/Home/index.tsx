@@ -47,6 +47,7 @@ const HomePage: React.FC = () => {
 					<div style={{ width: 100, height: 100, background: "blue" }}>6</div>
 					{/* <strong>https://github.com/HalseySpicy/Hooks-Admin/blob/master/src/layouts/index.tsx</strong>
 					<p>https://juejin.cn/post/7114555646820745253</p> */}
+					<p>https://jackchoumine.github.io/vue2/</p>
 				</Space>
 			</ConfigContext.Provider>
 		</div>

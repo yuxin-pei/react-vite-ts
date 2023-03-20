@@ -21,14 +21,14 @@ export class AxiosCanceler {
 		console.log(config, config.cancelToken, getPendingUrl(config));
 		this.removePending(config);
 		const url = getPendingUrl(config);
-		// config.cancelToken =
-		// 	config.cancelToken ||
-		// 	new CancelToken((cancel) => {
-		// 		if (!pendingMap.has(url)) {
-		// 			// 如果pending中不存在 就添加进去
-		// 			pendingMap.set(url, cancel);
-		// 		}
-		// 	});
+		config.cancelToken =
+			config.cancelToken ||
+			new CancelToken((cancel) => {
+				if (!pendingMap.has(url)) {
+					// 如果pending中不存在 就添加进去
+					pendingMap.set(url, cancel);
+				}
+			});
 	}
 
 	/**

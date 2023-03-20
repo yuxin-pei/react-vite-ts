@@ -52,7 +52,7 @@ class RequestHttp {
 			(response: AxiosResponse) => {
 				const { data, config } = response;
 				NProgress.done();
-				// axiosCanceler.removePending(config);
+				axiosCanceler.removePending(config);
 				tryHideFullScreenLoading();
 				// 登录失效
 				if (data.code === ResultEnum.OVERDUE) {
